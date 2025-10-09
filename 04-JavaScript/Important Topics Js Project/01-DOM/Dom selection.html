@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beginner DOM Example</title>
+</head>
+<body>
+
+    <h1 id="main-title" class="header">Hello World!</h1>
+
+    <script>
+        // 1. SELECT: Get the element by its unique ID.
+        const titleElement = document.getElementById('main-title');
+        // COMMON PITFALL: Always ensure your script loads *after* the elements you are trying to select,
+        // or wrap the code in a 'DOMContentLoaded' listener (see advanced example).
+
+        // 2. READ: Inspect the current content and class.
+        console.log('Initial Text:', titleElement.textContent); // Output: Hello World!
+
+        // 3. UPDATE (Content): Change the visible text.
+        titleElement.textContent = 'DOM Manipulation Mastered!';
+        // WHY: .textContent is safer than .innerHTML as it prevents XSS attacks 
+        // by treating the input strictly as text, not HTML tags.
+
+        // 4. UPDATE (Style): Change the appearance.
+        titleElement.style.color = '#3b82f6'; // Tailwind's blue-500
+        titleElement.style.textAlign = 'center';
+    </script>
+
+</body>
+</html>
