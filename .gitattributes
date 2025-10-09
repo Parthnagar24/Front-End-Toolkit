@@ -1,0 +1,6 @@
+# Force GitHub to treat all JS files as JavaScript
+*.js linguist-language=JavaScript
+
+# Optional: Ignore Notes/Images folders so they don’t skew language stats
+04-JavaScript/Notes\ Section/* linguist-vendored
+04-JavaScript/Important\ Topics\ Js\ Project/01-DOM/Notes/* linguist-vendored
